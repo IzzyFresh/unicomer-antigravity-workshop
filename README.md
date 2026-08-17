@@ -1,17 +1,18 @@
-# 🚀 Google Antigravity & Gemini Skills Workshop: Unicomer Deep Dive
+# 🚀 Google Antigravity 2.0 & Gemini Skills Workshop: Unicomer Deep Dive
 
 **Customer:** Grupo Unicomer (El Salvador / LATAM)  
 **Lead Architect & Presenter:** Israel Castillo  
 **Reviewers:** Alejandro & Mauricio  
 **Target Audience:** Software Engineers, Tech Leads, Solutions Architects & DevOps Engineers at Unicomer  
+**Primary Surfaces:** **Google Antigravity 2.0 (GUI)** & **Visual Studio Code Extension**
 
 ---
 
 ## 📋 Executive Overview
 
-This repository contains the complete technical enablement kit, slide content, hands-on lab modules, starter codebase, custom enterprise skills, and executive review package for the **Google Antigravity & Gemini Skills Deep Dive** for Unicomer.
+This repository contains the complete technical enablement kit, slide deck content, hands-on developer labs, starter codebase, custom enterprise coding skills, and executive review package for the **Google Antigravity 2.0 & Gemini Skills Deep Dive** for Unicomer.
 
-The goal of this initiative is to demonstrate the paradigm shift from traditional AI code completion (Copilots) to **Autonomous Agentic Software Engineering (Antigravity & Gemini 3.7 Flash)**, equipping Unicomer developers to build, refactor, test, and govern enterprise applications with zero friction and measurable acceleration.
+The goal of this initiative is to demonstrate the paradigm shift from traditional AI copilots (line autocomplete) to **Autonomous Multi-Agent Engineering (Antigravity 2.0 & Gemini 3.7 Flash)**, equipping Unicomer developers to plan, refactor, test, and govern enterprise applications with zero friction directly in **Antigravity 2.0** and **Visual Studio Code**.
 
 ---
 
@@ -19,35 +20,40 @@ The goal of this initiative is to demonstrate the paradigm shift from traditiona
 
 ```tree
 unicomer-antigravity-workshop/
-├── README.md                                    # This master index & overview
-├── 01_REVIEW_PACKAGE_ALEJANDRO_MAURICIO.md      # Review package & executive briefing for Friday sync
-├── 02_WORKSHOP_SLIDE_DECK_CONTENT.md           # Slide-by-slide technical deck content & speaker notes
-├── 03_VSCODE_AND_TOOLING_ROADMAP_RESEARCH.md   # VS Code extension research, roadmap & enterprise config
-├── custom-skills/                               # Reusable Gemini/Antigravity Enterprise Skills
+├── README.md                                    # Master index & facilitation guide
+├── DEMO_PROMPT_CHEATSHEET.md                    # Exact copy-paste prompts for the live demo
+├── 01_REVIEW_PACKAGE_ALEJANDRO_MAURICIO.md      # Review package & executive brief for Friday sync
+├── 02_WORKSHOP_SLIDE_DECK_CONTENT.md           # Slide-by-slide technical presentation & speaker notes
+├── 03_VSCODE_AND_TOOLING_ROADMAP_RESEARCH.md   # VS Code extension architecture, GA roadmap & governance
+├── custom-skills/                               # Reusable Enterprise Engineering Skills
+│   ├── fastapi-clean-architecture/
+│   │   └── SKILL.md                            # Clean Architecture scaffolding & layer separation
+│   ├── pytest-mock-generator/
+│   │   └── SKILL.md                            # Automated Pytest fixtures, mocks & boundary testing
 │   ├── unicomer-credit-policy/
-│   │   └── SKILL.md                            # Unicomer retail credit validation skill
+│   │   └── SKILL.md                            # Retail credit policy & brand caps
 │   └── unicomer-api-standards/
-│       └── SKILL.md                            # Enterprise REST/API contract enforcement skill
-├── labs/                                        # Step-by-step hands-on developer labs
-│   ├── LAB_01_ANTIGRAVITY_ESSENTIALS.md        # Lab 1: Setup, Navigation & Plan-Act-Verify Loop
-│   ├── LAB_02_CUSTOM_SKILLS_AND_RULES.md       # Lab 2: Building & Triggering Custom Skills
-│   ├── LAB_03_AUTONOMOUS_SUBAGENTS.md          # Lab 3: Multi-Agent Parallel Refactoring & Testing
-│   └── unicomer-sample-app/                    # Practical codebase for hands-on exercises
-│       ├── main.py                             # FastAPI Retail Credit & Loyalty Service
-│       ├── requirements.txt                    # App dependencies
-│       ├── test_main.py                        # Automated test suite
-│       └── README.md                           # Developer instructions for the lab app
+│       └── SKILL.md                            # REST API contract & OpenAPI standards
+└── labs/                                        # Step-by-step developer hands-on labs
+    ├── LAB_01_ANTIGRAVITY_ESSENTIALS.md        # Lab 1: Antigravity 2.0 GUI, VS Code & Plan-Act-Verify
+    ├── LAB_02_CUSTOM_SKILLS_AND_RULES.md       # Lab 2: Prompt-Driven Coding Skills Authoring
+    ├── LAB_03_AUTONOMOUS_SUBAGENTS.md          # Lab 3: Local Agents, Parallel Subagents & Sidecars
+    └── unicomer-sample-app/                    # Practical FastAPI Retail Credit & Loyalty Microservice
+        ├── main.py
+        ├── test_main.py
+        ├── requirements.txt
+        └── README.md
 ```
 
 ---
 
-## 🎯 Key Workshop Objectives
+## 🖥️ Surfaces Used in this Workshop
 
-1. **Demystify Autonomous Agentic Engineering**: Contrast 1st gen AI copilots (line autocomplete) with Antigravity’s 3rd gen agentic platform (Plan → Act → Verify loop with subagents and sandboxed execution).
-2. **Hands-On Frictionless Workflow**: Experience Antigravity across surfaces: **Antigravity 2.0 (GUI)**, **Antigravity CLI (Terminal)**, and **VS Code IDE Integration**.
-3. **Enterprise Gemini Skills & Rules**: Teach Unicomer teams how to codify their architectural guidelines, security policies, and retail business rules into reusable `SKILL.md` and `AGENTS.md` assets.
-4. **Enterprise Governance & Quotas**: Explain Gemini Enterprise pooled quotas ($10/$15 tier pooling per project), spend caps, strict sandboxing, MCP server whitelisting, and telemetry.
-5. **Pilot Adoption Validation**: Run the hands-on lab with a pilot developer group to gather velocity metrics and feedback.
+### 1. Antigravity 2.0 (GUI / Web)
+* **The Lead Agent Control Center:** Orchestrate long-horizon engineering tasks, inspect interactive implementation plans (`implementation_plan.md`), spawn parallel subagents with dynamic roles, and review rich walkthrough artifacts.
+
+### 2. Visual Studio Code Extension
+* **Your Native Editor Experience:** Antigravity integrates directly into the VS Code sidebar and diff viewer. Files edited in Antigravity 2.0 sync immediately with your local VS Code workspace. Authenticated seamlessly via Google Cloud Application Default Credentials (ADC).
 
 ---
 
@@ -55,20 +61,8 @@ unicomer-antigravity-workshop/
 
 | Time | Module | Format | Key Topics |
 | :--- | :--- | :--- | :--- |
-| **00:00 - 00:30** | **Part 1: The Agentic Revolution & Architecture** | Presentation | • Evolution: Copilot vs Interactive vs Full Agentic<br>• Gemini Enterprise & Antigravity Suite<br>• Gemini 3.7 Flash Benchmarks & Cost/Task |
-| **00:30 - 00:50** | **Part 2: Antigravity Surfaces & Tooling** | Demo & Tech Deep Dive | • Antigravity 2.0 GUI (Artifacts, Voice, Task boards)<br>• Antigravity CLI & Custom Slash Commands<br>• VS Code Plugin GA Roadmap & ADC Integration |
-| **00:50 - 01:30** | **Part 3: Hands-On Lab 1 & 2** | Interactive Lab | • **Lab 1**: Plan-Act-Verify with `unicomer-sample-app`<br>• **Lab 2**: Authoring Custom Gemini Skills & AGENTS.md rules |
-| **01:30 - 02:10** | **Part 4: Hands-On Lab 3 (Advanced Multi-Agent)** | Interactive Lab | • Spawning parallel subagents (Refactorer, Tester, Reviewer)<br>• Sandboxed execution & automated browser/API verification |
-| **02:10 - 02:30** | **Part 5: Governance, Quotas & Next Steps** | Discussion & Q&A | • Pooled Quotas ($10/$15), Spend Caps & Audit Telemetry<br>• Next steps for pilot onboarding and VS Code rollout |
-
----
-
-## 🚀 Quick Start for Facilitators
-
-1. **Pre-requisites Check**:
-   - Verify attendees have Google Cloud credentials / Gemini Enterprise access.
-   - Ensure local dev environments have Python 3.10+, Docker (or local venv), and VS Code / Antigravity CLI.
-2. **Review Deliverables**:
-   - Read [`01_REVIEW_PACKAGE_ALEJANDRO_MAURICIO.md`](file:///usr/local/google/home/israelcastillo/gcp-projects/unicomer-antigravity-workshop/01_REVIEW_PACKAGE_ALEJANDRO_MAURICIO.md) prior to Friday alignment.
-   - Review presentation slides in [`02_WORKSHOP_SLIDE_DECK_CONTENT.md`](file:///usr/local/google/home/israelcastillo/gcp-projects/unicomer-antigravity-workshop/02_WORKSHOP_SLIDE_DECK_CONTENT.md).
-   - Review tooling & plugin details in [`03_VSCODE_AND_TOOLING_ROADMAP_RESEARCH.md`](file:///usr/local/google/home/israelcastillo/gcp-projects/unicomer-antigravity-workshop/03_VSCODE_AND_TOOLING_ROADMAP_RESEARCH.md).
+| **00:00 - 00:30** | **Part 1: The Agentic Revolution & Architecture** | Slides & Executive Vision | • Evolution: Copilot vs Interactive vs Full Agentic<br>• Gemini Enterprise & Antigravity 2.0 Suite<br>• Gemini 3.7 Flash Benchmarks (63.7% DeepSWE) |
+| **00:30 - 00:50** | **Part 2: Antigravity 2.0 & VS Code Tour** | Live Demo | • Antigravity 2.0 GUI (Inspectable Artifacts, Voice, Subagent Tray)<br>• VS Code Extension GA Roadmap & ADC Integration<br>• Claude Code vs Antigravity 2.0 comparison |
+| **00:50 - 01:35** | **Part 3: Hands-On Lab 1 & 2** | Interactive Lab | • **Lab 1**: Plan-Act-Verify with `unicomer-sample-app`<br>• **Lab 2**: Authoring Clean Architecture & Pytest Skills via Prompts |
+| **01:35 - 02:15** | **Part 4: Hands-On Lab 3 (Local Agents & Subagents)** | Interactive Lab | • Defining local specialized agents via prompt<br>• Spawning 3 parallel subagents in isolated worktrees<br>• Configuring a background code quality sidecar |
+| **02:15 - 02:30** | **Part 5: Enterprise Governance & Q&A** | Discussion | • Pooled Quotas ($10/$15 per seat), Spend Caps & Audit Telemetry<br>• Pilot adoption survey & next steps |

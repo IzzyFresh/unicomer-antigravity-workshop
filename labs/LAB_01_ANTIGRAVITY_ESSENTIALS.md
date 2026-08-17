@@ -1,58 +1,76 @@
-# 🧪 Laboratorio 1: Fundamentos de Antigravity y el Bucle Plan-Act-Verify
+# 🧪 Laboratorio 1: Fundamentos de Antigravity 2.0 y el Bucle Plan-Act-Verify
 
 **Audiencia:** Desarrolladores e Ingenieros de Software de Unicomer  
 **Tiempo estimado:** 25 - 30 minutos  
-**Objetivo:** Familiarizarse con la interfaz de Antigravity (VS Code o CLI), comprender el ciclo `Plan → Act → Verify` y resolver un requerimiento real en el microservicio de crédito retail.
+**Superficie de Trabajo:** **Antigravity 2.0 (GUI) + Extensión de Visual Studio Code**  
+**Objetivo:** Familiarizarse con la interfaz visual de Antigravity 2.0, su integración nativa con VS Code, y ejecutar el ciclo `Plan → Act → Verify` para modernizar el microservicio de crédito retail.
 
 ---
 
-## 🎯 Escenario de Negocio
+## 🖥️ 1. Entorno de Trabajo: Antigravity 2.0 + VS Code
 
-El equipo de negocio de **La Curacao** reporta que el cálculo del ratio de endeudamiento (*Debt-to-Income DTI*) en el microservicio `unicomer-sample-app` no está utilizando la fórmula formal de amortización financiera francesa, lo que produce ligeras discrepancias en las cuotas mensuales de financiamiento.
+Durante este taller utilizaremos la combinación más productiva para desarrolladores:
+* **Antigravity 2.0 (GUI):** Tu panel de control agéntico principal para orquestar planes, ver artefactos interactivos, disparar subagentes y monitorear tareas.
+* **Visual Studio Code:** Tu editor de confianza donde se sincronizan automáticamente los archivos, diffs y reglas del repositorio.
+
+```
++------------------------------------+------------------------------------+
+|        Visual Studio Code          |         Antigravity 2.0 (GUI)      |
+|  - Editor de código activo         |  - Panel conversacional            |
+|  - Diffs interactivos integrados   |  - Planes interactivos (Artifacts) |
+|  - Terminal / Extension Panel      |  - Bandeja de Subagentes           |
++------------------------------------+------------------------------------+
+                   \                             /
+                    \--- Antigravity Harness ---/
+```
 
 ---
 
 ## 👣 Paso a Paso del Laboratorio
 
-### Paso 1: Exploración del Proyecto y Contexto
-1. Abre el proyecto en VS Code o en tu terminal:
-   ```bash
-   cd labs/unicomer-sample-app
-   ```
-2. Inicia una conversación con **Antigravity** pidiendo un análisis del proyecto:
-   > *"Explica la estructura de este microservicio, qué librerías utiliza y cuáles son los endpoints principales expuestos."*
-3. Observa cómo Antigravity lee los archivos relevantes (`main.py`, `requirements.txt`, `test_main.py`) sin requerir que copies y pegues código manualmente en una ventana de chat.
+### Paso 1: Abrir el Proyecto en Antigravity 2.0 y VS Code
+1. Abre la carpeta `unicomer-sample-app` en tu **Visual Studio Code**.
+2. Abre **Antigravity 2.0** y selecciona el workspace del proyecto.
+3. Envía tu primer mensaje conversacional en Antigravity 2.0:
+   > *"Analiza la estructura de este microservicio: qué librerías utiliza, cuáles son los endpoints principales en `main.py` y qué cobertura de tests tenemos actualmente."*
+4. Observa cómo Antigravity 2.0 inspecciona el workspace sin necesidad de que copies ni pegues código manualmente.
 
 ---
 
-### Paso 2: Fase 1 - PLAN (Generación del Implementation Plan)
-1. Envía el siguiente prompt a Antigravity:
-   > *"Necesito corregir el cálculo de cuotas mensuales en `main.py` para usar la fórmula estándar de cuota fija nivelada: Cuota = P * [ r(1+r)^n ] / [ (1+r)^n - 1 ]. Por favor, genera un Implementation Plan detallando qué funciones modificarás y los riesgos potenciales."*
-2. **Revisa el artefacto generado:**
-   - Observa cómo Antigravity genera un archivo de plan interactivo (`implementation_plan.md`).
-   - Revisa la lista de cambios propuestos y el análisis de impacto.
-   - Haz clic en **"Proceed"** o responde *"Acepto el plan, procede con la implementación"*.
+### Paso 2: Fase 1 - PLAN (Generación del Implementation Plan Interactivo)
+1. En el panel de chat de Antigravity 2.0, ingresa el siguiente requerimiento técnico:
+   > *"Necesito corregir el cálculo de cuotas mensuales en `main.py` para usar la fórmula formal de amortización francesa: Cuota = P * [ r(1+r)^n ] / [ (1+r)^n - 1 ]. Por favor, genera un Implementation Plan detallando las funciones afectadas, riesgos y la estrategia de verificación."*
+2. **Revisa el artefacto visual generado:**
+   - En el panel derecho de Antigravity 2.0 aparecerá un artefacto interactivo (`implementation_plan.md`).
+   - Revisa la lista de verificación y haz clic en el botón azul **"Proceed"** (o escribe *"Acepto el plan, procede"*).
 
 ---
 
-### Paso 3: Fase 2 - ACT (Aplicación Atómica de Cambios)
-1. Antigravity aplicará las modificaciones necesarias en `main.py`.
-2. Observa el visor de **Diffs**:
-   - Nota que Antigravity realiza ediciones dirigidas conservando la documentación existente y comentarios de negocio.
-   - Revisa la función modificada `evaluate_credit`.
+### Paso 3: Fase 2 - ACT (Revisión Visual de Diffs en Antigravity 2.0 y VS Code)
+1. Antigravity 2.0 aplicará las modificaciones en `main.py`.
+2. **Inspecciona los Diffs:**
+   - En Antigravity 2.0 y en tu VS Code verás los bloques de diff resaltados en verde (adiciones) y rojo (eliminaciones).
+   - Observa que las ediciones son atómicas y preservan la documentación previa y los tipos de Pydantic.
 
 ---
 
-### Paso 4: Fase 3 - VERIFY (Ejecución de Pruebas en Sandbox)
-1. Pide a Antigravity que verifique los cambios:
-   > *"Ejecuta la suite de pruebas con pytest para verificar que los cambios no hayan roto el comportamiento existente."*
-2. Antigravity ejecutará el comando de consola de forma segura (respetando la política de revisión).
-3. Si alguna prueba existente falla debido a los nuevos decimales calculados, pide al agente:
-   > *"Ajusta las aserciones de `test_main.py` para reflejar la precisión de la nueva fórmula financiera y vuelve a correr los tests."*
+### Paso 4: Fase 3 - VERIFY (Ejecución en Sandbox y Feedback en Tiempo Real)
+1. Solicita la verificación en el chat de Antigravity 2.0:
+   > *"Ejecuta la suite de pruebas de pytest en el sandbox para verificar que los cambios financieros sean matemáticamente exactos y no rompan los endpoints existentes."*
+2. Antigravity 2.0 correrá la suite de forma aislada y te mostrará el resultado de la ejecución.
+3. Si los decimales de la nueva fórmula requieren ajustar las aserciones en `test_main.py`, pídele:
+   > *"Ajusta las aserciones de `test_main.py` a la precisión de la nueva cuota francesa y vuelve a validar."*
+
+---
+
+## 🔌 2. Nota sobre la Integración con Visual Studio Code
+* **Sincronización Bidireccional:** Todo cambio aceptado en Antigravity 2.0 se refleja al instante en los archivos abiertos en VS Code.
+* **Extensión de VS Code:** Si prefieres no salir de tu editor, puedes abrir el panel lateral de **Antigravity en VS Code** usando tu sesión corporativa autenticada vía ADC (Google Cloud).
 
 ---
 
 ## ✅ Criterios de Éxito
-- [ ] Has generado y aprobado tu primer *Implementation Plan*.
-- [ ] Los diffs de código fueron revisados visualmente.
-- [ ] La suite de pruebas de `pytest` ejecutó exitosamente con 100% de tests pasando.
+- [ ] Conectaste tu workspace en Antigravity 2.0 y VS Code.
+- [ ] Generaste e interactuaste con tu primer *Implementation Plan* visual.
+- [ ] Inspeccionaste los diffs de código generados por el agente.
+- [ ] Ejecutaste la verificación en el sandbox con 100% de tests pasando.
