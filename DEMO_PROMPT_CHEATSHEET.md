@@ -1,19 +1,20 @@
-# 🎙️ Live Demo Cheat Sheet: Antigravity 2.0 & Engineering Skills (Unicomer)
+# 🎙️ Live Demo Cheat Sheet: Antigravity 2.0 & Local Multi-Agent Harness (Unicomer)
 
 **Target Audience:** Alejandro, Mauricio & Unicomer Engineering Leads (Users of Claude Code & modern IDEs)  
 **Presenter:** Israel Castillo  
-**Core Storyline:** Demonstrating the ease of **creating, extracting, and executing pure Software Engineering Skills in Antigravity 2.0 via natural language prompts**, orchestrating parallel subagents, and comparing with Claude Code.
+**Core Storyline:** Demonstrating the ease of **creating local specialized coding agents, prompt-driven engineering skills, parallel subagents (Slide 13), and long-lived sidecars (Slide 14)** in Antigravity 2.0 with **Gemini 3.7 Flash**.
 
 ---
 
-## ⏱️ Live Demo Timeline (12 - 15 Minutes Total)
+## ⏱️ Live Demo Timeline (15 Minutes Total)
 
 ```
 [00:00 - 02:00] Act 1: Set the Stage & Implementation Plan in Antigravity 2.0
-[02:00 - 05:00] Act 2: Prompt-Driven Coding Skills Creation (Clean Architecture & Pytest Mocks)
-[05:00 - 09:00] Act 3: Launch Parallel Subagents (Architecture Refactor, Security, QA)
-[09:00 - 11:00] Act 4: Sandbox Verification & Inspectable Walkthrough Artifact
-[11:00 - 14:00] Act 5: The Claude Code vs. Antigravity 2.0 Direct Comparison
+[02:00 - 05:00] Act 2: Prompt-Driven Coding Skills (Clean Architecture & Pytest Mocks)
+[05:00 - 08:00] Act 3: Spawning Local Agents & Parallel Subagents (Slide 13)
+[08:00 - 10:00] Act 4: Creating a Local Background Sidecar / Watcher (Slide 14)
+[10:00 - 12:00] Act 5: Sandbox Verification & Inspectable Walkthrough Artifact
+[12:00 - 14:00] Act 6: The Claude Code vs. Antigravity 2.0 Direct Comparison
 [14:00 - 15:00] Q&A & Developer Hands-on Kickoff
 ```
 
@@ -36,7 +37,7 @@ Please generate an Implementation Plan detailing the proposed file structure, te
 
 ---
 
-## ⚡ Act 2: Creating Software Engineering Skills Live via Prompts in Antigravity 2.0
+## ⚡ Act 2: Creating Software Engineering Skills Live via Prompts
 
 ### 🗣️ Speaker Talking Point:
 > *"How do you standardize architecture and testing across all Unicomer development squads? In Antigravity 2.0, you create reusable coding skills in seconds with natural language prompts."*
@@ -62,12 +63,12 @@ Create a developer testing skill in .agents/skills/pytest-mock-generator/SKILL.m
 
 ---
 
-## 🤖 Act 3: Spawning Parallel Subagents in Antigravity 2.0
+## 🤖 Act 3: Creating Local Agents & Spawning Parallel Subagents (Slide 13)
 
 ### 🗣️ Speaker Talking Point:
-> *"Now our Lead Agent orchestrates 3 specialized subagents running concurrently to execute the refactoring and test generation."*
+> *"As shown in Slide 13 of our architecture deck, Antigravity lets us dynamically configure local subagents with on-the-fly roles, isolated git worktrees, and specialized prompts running in parallel."*
 
-### 📋 Prompt 3:
+### 📋 Prompt 3 (Spawn Parallel Subagents):
 ```text
 Execute our implementation plan and apply our new 'fastapi-clean-architecture' and 'pytest-mock-generator' skills using 3 specialized subagents in parallel:
 - Subagent 1 (Role: 'Backend Architect'): Refactor main.py into routers/, services/, and schemas/ following our clean architecture skill.
@@ -79,26 +80,39 @@ Coordinate and report back when all subagents complete their work.
 
 ---
 
-## 🛡️ Act 4: Sandbox Verification & Walkthrough Artifact
+## 🔄 Act 4: Creating a Local Background Sidecar / Watcher (Slide 14)
+
+### 🗣️ Speaker Talking Point:
+> *"Slide 14 introduces Sidecars: long-lived utilities that run in the background to monitor code quality, review pull requests, or trigger cron tasks."*
+
+### 📋 Prompt 4 (Define Local Sidecar):
+```text
+Configure a local background sidecar called 'code-quality-watcher' that continuously validates that new files adhere to our 'fastapi-clean-architecture' rules and alerts if any unmasked PII is introduced.
+```
+
+---
+
+## 🛡️ Act 5: Sandbox Verification & Walkthrough Artifact
 
 ### 🗣️ Speaker Talking Point:
 > *"Antigravity verifies its own work inside a secure execution sandbox before handing it back to the developer."*
 
-### 📋 Prompt 4:
+### 📋 Prompt 5:
 ```text
 Execute pytest on the test suite in the sandbox to verify that 100% of tests pass. Then generate a comprehensive walkthrough.md artifact summarizing all changes, architectural layers created, and test coverage metrics.
 ```
 
 ---
 
-## 🥊 Act 5: Claude Code vs. Antigravity 2.0 Comparison for Developers
+## 🥊 Act 6: Claude Code vs. Antigravity 2.0 Comparison for Developers
 
 ### Talking points for teams familiar with Claude Code:
 
 | Capability | Claude Code | Google Antigravity 2.0 |
 | :--- | :--- | :--- |
+| **Local Subagents & Worktrees** | Single-threaded sequential agent | **Parallel Multi-Subagents** with dynamic roles and isolated worktrees (Slide 13) |
+| **Long-Lived Sidecars & Cron** | Not supported | **Background Sidecars & Scheduled Tasks** (Slide 14) |
 | **Engineering Skill Authoring** | Manual markdown/YAML editing | **Conversational Prompt Authoring & Pattern Extraction** directly from code |
-| **Execution Architecture** | Single-threaded sequential agent | **Parallel Multi-Subagents** with isolated git worktrees |
 | **Coding Benchmark** | 54.0% (Sonnet) / 69.6% (Opus) | **63.7% DeepSWE first-pass accuracy** on Gemini 3.7 Flash |
 | **Verification & Testing** | Manual terminal loops | **Automated Sandbox Execution & Inspectable Artifacts** (Plans, Diffs, Walkthroughs) |
 | **Team Synchronization** | Individual local configurations | **Git-Native (`.agents/skills/`)** — clone once, entire team inherits all engineering skills |
