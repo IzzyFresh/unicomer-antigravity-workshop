@@ -1,31 +1,27 @@
-# 🚀 Google Antigravity 2.0 & Gemini Skills Workshop: Unicomer Deep Dive
+# 🛠️ Google Antigravity 2.0: Developer Hands-On Labs (Unicomer)
 
-**Customer:** Grupo Unicomer (El Salvador / LATAM)  
-**Lead Architect & Presenter:** Israel Castillo  
-**Reviewers:** Alejandro & Mauricio  
-**Target Audience:** Software Engineers, Tech Leads, Solutions Architects & DevOps Engineers at Unicomer  
-**Primary Surfaces:** **Google Antigravity 2.0 (GUI)** & **Visual Studio Code Extension**
+**Target Audience:** Software Engineers, Backend Developers, Tech Leads & DevOps at Grupo Unicomer  
+**Core Tooling:** **Google Antigravity 2.0 (GUI)** + **Visual Studio Code Extension**  
+**Underlying Engine:** **Gemini 3.7 Flash** (Frontier Agentic Reasoning, 63.7% DeepSWE)
 
 ---
 
-## 📋 Executive Overview
+## 🎯 Hands-On Workshop Mission
 
-This repository contains the complete technical enablement kit, slide deck content, hands-on developer labs, starter codebase, custom enterprise coding skills, and executive review package for the **Google Antigravity 2.0 & Gemini Skills Deep Dive** for Unicomer.
+This repository is a **100% code-first, interactive laboratory** designed to teach Unicomer engineers how to leverage **Google Antigravity 2.0** for autonomous software development. 
 
-The goal of this initiative is to demonstrate the paradigm shift from traditional AI copilots (line autocomplete) to **Autonomous Multi-Agent Engineering (Antigravity 2.0 & Gemini 3.7 Flash)**, equipping Unicomer developers to plan, refactor, test, and govern enterprise applications with zero friction directly in **Antigravity 2.0** and **Visual Studio Code**.
+Instead of traditional copilots that only autocomplete single lines of code, you will experience **autonomous agentic workflows**: planning multi-file refactors, authoring reusable software engineering skills via natural language prompts, orchestrating parallel subagents across isolated Git worktrees, and validating code inside secure sandboxes.
 
 ---
 
-## 📂 Project Structure
+## 📂 Repository Structure
 
 ```tree
 unicomer-antigravity-workshop/
-├── README.md                                    # Master index & facilitation guide
-├── DEMO_PROMPT_CHEATSHEET.md                    # Exact copy-paste prompts for the live demo
-├── 01_REVIEW_PACKAGE_ALEJANDRO_MAURICIO.md      # Review package & executive brief for Friday sync
-├── 02_WORKSHOP_SLIDE_DECK_CONTENT.md           # Slide-by-slide technical presentation & speaker notes
-├── 03_VSCODE_AND_TOOLING_ROADMAP_RESEARCH.md   # VS Code extension architecture, GA roadmap & governance
-├── custom-skills/                               # Reusable Enterprise Engineering Skills
+├── DEMO_PROMPT_CHEATSHEET.md                    # Copy-paste prompts & talk track for facilitators
+├── 01_REVIEW_PACKAGE_ALEJANDRO_MAURICIO.md      # Hands-on enablement brief for engineering leadership
+├── 03_VSCODE_AND_TOOLING_ROADMAP_RESEARCH.md   # VS Code extension architecture & ADC configuration
+├── custom-skills/                               # Enterprise Engineering Skills (Drop-in ready)
 │   ├── fastapi-clean-architecture/
 │   │   └── SKILL.md                            # Clean Architecture scaffolding & layer separation
 │   ├── pytest-mock-generator/
@@ -34,11 +30,11 @@ unicomer-antigravity-workshop/
 │   │   └── SKILL.md                            # Retail credit policy & brand caps
 │   └── unicomer-api-standards/
 │       └── SKILL.md                            # REST API contract & OpenAPI standards
-└── labs/                                        # Step-by-step developer hands-on labs
+└── labs/                                        # Step-by-step interactive developer labs
     ├── LAB_01_ANTIGRAVITY_ESSENTIALS.md        # Lab 1: Antigravity 2.0 GUI, VS Code & Plan-Act-Verify
-    ├── LAB_02_CUSTOM_SKILLS_AND_RULES.md       # Lab 2: Prompt-Driven Coding Skills Authoring
+    ├── LAB_02_CUSTOM_SKILLS_AND_RULES.md       # Lab 2: Prompt-Driven Engineering Skills Authoring
     ├── LAB_03_AUTONOMOUS_SUBAGENTS.md          # Lab 3: Local Agents, Parallel Subagents & Sidecars
-    └── unicomer-sample-app/                    # Practical FastAPI Retail Credit & Loyalty Microservice
+    └── unicomer-sample-app/                    # Practical FastAPI Retail Credit Microservice
         ├── main.py
         ├── test_main.py
         ├── requirements.txt
@@ -47,22 +43,27 @@ unicomer-antigravity-workshop/
 
 ---
 
-## 🖥️ Surfaces Used in this Workshop
+## 🚀 The 3 Hands-On Labs
 
-### 1. Antigravity 2.0 (GUI / Web)
-* **The Lead Agent Control Center:** Orchestrate long-horizon engineering tasks, inspect interactive implementation plans (`implementation_plan.md`), spawn parallel subagents with dynamic roles, and review rich walkthrough artifacts.
-
-### 2. Visual Studio Code Extension
-* **Your Native Editor Experience:** Antigravity integrates directly into the VS Code sidebar and diff viewer. Files edited in Antigravity 2.0 sync immediately with your local VS Code workspace. Authenticated seamlessly via Google Cloud Application Default Credentials (ADC).
+| Lab | Developer Focus | Key Takeaways & Deliverables |
+| :--- | :--- | :--- |
+| **[Lab 1: The Plan-Act-Verify Loop](labs/LAB_01_ANTIGRAVITY_ESSENTIALS.md)** | *Interface & Autonomous Workflow* | Connect Antigravity 2.0 with VS Code, generate interactive `implementation_plan.md` artifacts, review atomic code diffs, and verify fixes in the sandbox. |
+| **[Lab 2: Prompt-Driven Engineering Skills](labs/LAB_02_CUSTOM_SKILLS_AND_RULES.md)** | *Architecture & Quality Automation* | Use natural language prompts to create reusable coding skills (`fastapi-clean-architecture`, `pytest-mock-generator`), refactor monolithic code, and sync skills across the team via Git (`.agents/skills/`). |
+| **[Lab 3: Local Agents, Subagents & Sidecars](labs/LAB_03_AUTONOMOUS_SUBAGENTS.md)** | *Parallel Multi-Agent Scale* | Define local agents, spawn 3 parallel subagents (Architect, Security Auditor, QA) working in isolated Git worktrees, configure background quality sidecars, and generate a final `walkthrough.md` artifact. |
 
 ---
 
-## ⏱️ Proposed Workshop Agenda (2.5 - 3 Hours)
+## ⚡ Quick Start for Developers
 
-| Time | Module | Format | Key Topics |
-| :--- | :--- | :--- | :--- |
-| **00:00 - 00:30** | **Part 1: The Agentic Revolution & Architecture** | Slides & Executive Vision | • Evolution: Copilot vs Interactive vs Full Agentic<br>• Gemini Enterprise & Antigravity 2.0 Suite<br>• Gemini 3.7 Flash Benchmarks (63.7% DeepSWE) |
-| **00:30 - 00:50** | **Part 2: Antigravity 2.0 & VS Code Tour** | Live Demo | • Antigravity 2.0 GUI (Inspectable Artifacts, Voice, Subagent Tray)<br>• VS Code Extension GA Roadmap & ADC Integration<br>• Claude Code vs Antigravity 2.0 comparison |
-| **00:50 - 01:35** | **Part 3: Hands-On Lab 1 & 2** | Interactive Lab | • **Lab 1**: Plan-Act-Verify with `unicomer-sample-app`<br>• **Lab 2**: Authoring Clean Architecture & Pytest Skills via Prompts |
-| **01:35 - 02:15** | **Part 4: Hands-On Lab 3 (Local Agents & Subagents)** | Interactive Lab | • Defining local specialized agents via prompt<br>• Spawning 3 parallel subagents in isolated worktrees<br>• Configuring a background code quality sidecar |
-| **02:15 - 02:30** | **Part 5: Enterprise Governance & Q&A** | Discussion | • Pooled Quotas ($10/$15 per seat), Spend Caps & Audit Telemetry<br>• Pilot adoption survey & next steps |
+1. **Clone this repository into your workspace:**
+   ```bash
+   git clone https://github.com/IzzyFresh/unicomer-antigravity-workshop.git
+   cd unicomer-antigravity-workshop/labs/unicomer-sample-app
+   ```
+2. **Open the project in Visual Studio Code:**
+   ```bash
+   code .
+   ```
+3. **Open Antigravity 2.0 (GUI):**
+   * Select the `unicomer-sample-app` workspace.
+   * Open **[Lab 1 Guide](labs/LAB_01_ANTIGRAVITY_ESSENTIALS.md)** and start interacting with your Lead Agent!

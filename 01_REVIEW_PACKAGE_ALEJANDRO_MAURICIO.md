@@ -1,92 +1,49 @@
-# 📑 Material de Revisión: Taller Deep Dive Antigravity & Gemini Skills
-## Documento para Revisión y Alineación con Alejandro y Mauricio
+# 📑 Paquete de Revisión: Taller Hands-On Antigravity 2.0 & Gemini Skills
+## Documento de Alineación Técnica para Alejandro y Mauricio
 
-**Fecha de Entrega para Revisión:** Viernes (Semana previa al taller)  
-**Facilitador:** Israel Castillo (Google Cloud / Antigravity Lead)  
+**Fecha de Entrega para Revisión:** Viernes  
+**Facilitador:** Israel Castillo (Google Cloud)  
 **Destinatarios:** Alejandro, Mauricio  
-**Objetivo de la Reunión:** Revisar la estructura técnica, validar los laboratorios prácticos de Unicomer, confirmar la estrategia de integración con VS Code y afinar detalles antes de la sesión piloto con desarrolladores.
+**Enfoque del Repositorio:** **100% Práctico / Hands-On para Desarrolladores** *(La presentación ejecutiva de apoyo se gestionará en Google Slides por separado)*.
 
 ---
 
 ## 🎯 1. Resumen Ejecutivo y Propósito
 
-Grupo Unicomer está evaluando la adopción de herramientas de desarrollo asistidas por Inteligencia Artificial para acelerar el ciclo de vida del software (SDLC), modernizar sus aplicaciones de retail/fintech (ej. *La Curacao, Emma, RadioShack, Gollo*) y elevar la productividad de sus equipos de ingeniería.
+Este paquete técnico prepara el **Taller Práctico (Hands-On Lab)** para el equipo de desarrollo de **Grupo Unicomer en El Salvador**. 
 
-Este taller técnico está diseñado para demostrar que **Google Antigravity no es solo un copiloto de autocompletado**, sino una **plataforma completa de ingeniería de software agéntica**. 
+El objetivo es demostrar en código vivo la transición de herramientas de autocompletado tradicionales a **Ingeniería de Software Agéntica Autónoma** utilizando **Google Antigravity 2.0** y el modelo **Gemini 3.7 Flash** (con soporte integrado para VS Code).
 
-### 🔑 Mensajes Clave para el Equipo de Desarrollo de Unicomer:
-1. **Salto de Productividad de Días/Semanas a Horas:** De la asistencia línea por línea a agentes autónomos que planifican, ejecutan cambios multifile y verifican el código (*Plan → Act → Verify*).
-2. **Cero Fricción en el Entorno Actual:** Compatibilidad nativa con VS Code, JetBrains y terminal CLI, permitiendo a los desarrolladores trabajar donde ya son productivos.
-3. **Gobierno Corporativo y Seguridad:** Control centralizado de cuotas agrupadas (*Pooled Quotas* de \$10/\$15 USD por desarrollador/mes en Gemini Enterprise), auditoría de prompts, sandboxing y políticas de ejecución.
-4. **Habilidades Personalizadas (*Gemini Skills*):** Capacidad de empaquetar reglas de negocio, estándares de arquitectura y políticas de crédito de Unicomer directamente en el agente.
-
----
-
-## 📅 2. Plan de Trabajo y Cronograma de Hitos
-
-```mermaid
-gantt
-    title Cronograma de Habilitación Antigravity Unicomer
-    dateFormat  YYYY-MM-DD
-    section Preparación
-    Entrega de Material a Alejandro y Mauricio :crit, 2026-08-21, 1d
-    Sesión de Feedback y Ajustes              :2026-08-24, 2d
-    section Laboratorio Piloto
-    Setup de Entornos y Accesos               :2026-08-26, 2d
-    Ejecución del Taller Deep Dive (Piloto)   :active, 2026-08-28, 1d
-    section Evaluación y Escala
-    Recopilación de Métricas de Adopción     :2026-08-31, 3d
-    Propuesta de Despliegue General           :2026-09-03, 2d
-```
+### 🔑 Pilares del Taller Práctico:
+1. **Flujo de Ingeniería de 3 Fases (*Plan → Act → Verify*):** Dejar que el agente analice el repositorio, genere planes de implementación interactivos (`implementation_plan.md`), aplique diffs atómicos y valide pruebas en sandbox.
+2. **Creación de Habilidades de Código por Prompt:** Enseñar a los desarrolladores a estandarizar Clean Architecture y generación de pruebas Pytest usando lenguaje natural en Antigravity 2.0 (comparándolo con Claude Code).
+3. **Subagentes en Paralelo (*Worktrees* Aislados):** Lanzar múltiples agentes concurrentes (Arquitecto, Auditor de Seguridad/PII y QA Engineer) que trabajan al mismo tiempo sin bloquear el editor.
+4. **Integración Nativa con VS Code:** Cero fricción de adopción; los desarrolladores mantienen su editor habitual sincronizado en tiempo real con el harness de Antigravity 2.0.
 
 ---
 
-## 📊 3. Desglose del Contenido del Taller (Agenda Técnica)
+## 🛠️ 2. Estructura de los Laboratorios Prácticos
 
-| Bloque | Duración | Tema Principal | Enfoque Práctico / Demo |
-| :--- | :--- | :--- | :--- |
-| **Bloque 1** | 30 min | **Visión y Arquitectura Agéntica** | Presentación ejecutiva + benchmarks Gemini 3.7 Flash vs Sonnet / GPT |
-| **Bloque 2** | 20 min | **Superficies de Antigravity** | Antigravity 2.0 (GUI), Antigravity CLI y Extensión VS Code (Roadmap GA) |
-| **Bloque 3** | 40 min | **Laboratorio 1 & 2: Flujo Base y Skills** | Refactorización de API Unicomer + Creación de `SKILL.md` corporativo |
-| **Bloque 4** | 40 min | **Laboratorio 3: Subagentes y Testing** | Despliegue de subagentes en paralelo (Refactor, Security Audit, Unit Tests) |
-| **Bloque 5** | 20 min | **Gobierno, Cuotas y Q&A** | Quotas (\$10/\$15), Spend Caps, Sandbox, Políticas de Terminal y Cierre |
+| Módulo | Enfoque Técnico | Dinámica para los Desarrolladores de Unicomer |
+| :--- | :--- | :--- |
+| **Lab 1: Fundamentos y Plan-Act-Verify** | *Interfaz y Flujo Autónomo* | Conexión Antigravity 2.0 + VS Code. Diagnóstico del microservicio `unicomer-sample-app`, corrección de fórmulas financieras mediante *Implementation Plans* y verificación en sandbox. |
+| **Lab 2: Habilidades de Ingeniería (Skills)** | *Arquitectura y Automatización* | Creación conversacional de habilidades (`fastapi-clean-architecture` y `pytest-mock-generator`), refactorización hacia capas modulares y sincronización con el equipo vía Git (`.agents/skills/`). |
+| **Lab 3: Agentes Locales y Subagentes** | *Escalabilidad Multi-Agente* | Despliegue de 3 subagentes en paralelo con ramas/worktrees aislados (Arquitectura, Sanitización de PII y QA), configuración de un sidecar de calidad y generación del artefacto `walkthrough.md`. |
 
 ---
 
-## 🛠️ 4. Laboratorio Práctico Propuesto (Caso de Uso Unicomer)
+## 🔍 3. Integración con Visual Studio Code y Entorno de Desarrollo
 
-Para garantizar la relevancia inmediata, el laboratorio utiliza un caso de uso adaptado a Unicomer: **`unicomer-credit-eligibility-api`** (un microservicio FastAPI de evaluación de crédito y cálculo de lealtad).
-
-### Dinámica del Laboratorio:
-1. **Problema Inicial:** La API tiene un endpoint con un fallo en la fórmula de ratio de endeudamiento (*Debt-to-Income DTI*), carece de validación de estándares REST de Unicomer y le faltan pruebas unitarias para clientes VIP.
-2. **Paso 1 (Plan):** El desarrollador solicita a Antigravity analizar el repositorio y generar un *Implementation Plan*.
-3. **Paso 2 (Act + Skill):** Se aplica el custom skill `unicomer-credit-policy` para corregir la fórmula y estructurar las respuestas según el estándar Unicomer.
-4. **Paso 3 (Verify):** Antigravity ejecuta `pytest` dentro del sandbox, detecta edge cases y genera la suite de pruebas automatizada sin salir del flujo.
-5. **Paso 4 (Subagentes):** Se lanza un subagente auditor de seguridad para verificar que no haya exposición de datos sensibles (PII/DUI/NIT) en logs.
+- **Disponibilidad:** **General Availability (GA)** en el roadmap de Agosto.
+- **Autenticación Corporativa:** Soporte nativo para *Application Default Credentials (ADC)* y *Workload Identity Federation (WIF)* sin requerir API keys manuales.
+- **Sincronización Git-Native:** Las habilidades y reglas guardadas en `.agents/` en el repositorio se distribuyen a todos los desarrolladores automáticamente con un simple `git pull`.
 
 ---
 
-## 🔍 5. Estado de la Integración con Visual Studio Code
+## 📝 4. Rúbrica de Validación para la Sesión del Viernes
 
-Uno de los puntos clave acordados fue clarificar el estado del plugin de VS Code:
-
-- **Estado en Roadmap:** **General Availability (GA) en Agosto**.
-- **Mecanismo de Despliegue:** Extensión oficial instalable desde el VS Code Marketplace o empaquetada como archivo `.vsix` corporativo.
-- **Autenticación:** Soporte nativo para *Application Default Credentials (ADC)* y *Workload Identity Federation* a través de Gemini Enterprise Agent Platform.
-- **Experiencia de Usuario:** Mantiene paridad con la CLI compartiendo los mismos archivos de configuración global (`~/.gemini/settings.json`), skills y reglas de proyecto (`.agents/skills/`).
-
----
-
-## 📝 6. Rúbrica de Feedback para Alejandro y Mauricio
-
-Por favor revisar los siguientes aspectos y proporcionar retroalimentación:
-
-- [ ] **Alineación de Casos de Uso:** ¿El microservicio de evaluación de crédito y retail refleja adecuadamente las prioridades de los equipos de desarrollo de Unicomer?
-- [ ] **Profundidad Técnica:** ¿El balance entre la presentación conceptual (30%) y el laboratorio práctico (70%) es adecuado para el grupo piloto?
-- [ ] **Configuración de Entorno:** ¿Los desarrolladores tendrán acceso a terminal con Python 3.10+ y VS Code, o prefieren que facilitemos contenedores pre-configurados?
-- [ ] **Métricas de Éxito del Piloto:** ¿Qué KPIs definirán el éxito de la sesión? (Ej. Reducción de tiempo en resolución de bugs, satisfacción del desarrollador > 4.5/5, adopción de custom skills).
-
----
-
-## 📬 Contacto y Siguientes Pasos
-Tras recibir sus comentarios el viernes, aplicaremos los ajustes el lunes y enviaremos la guía de prerrequisitos a los participantes del grupo piloto.
+Por favor validar los siguientes puntos:
+- [ ] **Enfoque 100% de Desarrollo:** ¿Los ejercicios de refactorización hacia Clean Architecture, generación de Pytest y auditoría de PII son representativos para los desarrolladores de Unicomer?
+- [ ] **Herramientas:** ¿Se confirma el uso de **Antigravity 2.0 (GUI)** + **VS Code** para todos los participantes?
+- [ ] **Repositorio de Trabajo:** El repositorio público de GitHub está listo para ser clonado por los desarrolladores:  
+  👉 `https://github.com/IzzyFresh/unicomer-antigravity-workshop`
