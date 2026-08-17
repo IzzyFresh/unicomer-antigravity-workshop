@@ -19,7 +19,7 @@ Instead of traditional copilots that only autocomplete single lines of code, you
 ```tree
 unicomer-antigravity-workshop/
 ├── DEMO_PROMPT_CHEATSHEET.md                    # Copy-paste prompts & talk track for facilitators
-├── 01_REVIEW_PACKAGE_ALEJANDRO_MAURICIO.md      # Hands-on enablement brief for engineering leadership
+├── 01_WORKSHOP_ENABLEMENT_BRIEF.md              # Hands-on enablement brief for engineering leadership
 ├── 03_VSCODE_AND_TOOLING_ROADMAP_RESEARCH.md   # VS Code extension architecture & ADC configuration
 ├── custom-skills/                               # Enterprise Engineering Skills (Drop-in ready)
 │   ├── fastapi-clean-architecture/
