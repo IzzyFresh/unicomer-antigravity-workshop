@@ -55,6 +55,11 @@ unicomer-antigravity-workshop/
 
 ## ⚡ Quick Start for Developers
 
+* **Visual Studio Code Extension:**
+  * 📦 **VS Code Marketplace:** [https://marketplace.visualstudio.com/items?itemName=Google.antigravity](https://marketplace.visualstudio.com/items?itemName=Google.antigravity)
+  * ⚡ **One-Click Install in VS Code:** [`vscode:extension/Google.antigravity`](vscode:extension/Google.antigravity)
+  * 🌐 **Official Portal:** [https://antigravity.google](https://antigravity.google)
+
 1. **Clone this repository into your workspace:**
    ```bash
    git clone https://github.com/IzzyFresh/unicomer-antigravity-workshop.git

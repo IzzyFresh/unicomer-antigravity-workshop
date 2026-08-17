@@ -1,6 +1,6 @@
 # 🎙️ Live Demo Cheat Sheet: Antigravity 2.0 & Local Multi-Agent Harness (Unicomer)
 
-**Target Audience:** Alejandro, Mauricio & Unicomer Engineering Leads (Users of Claude Code & modern IDEs)  
+**Target Audience:** Software Engineers, Tech Leads & DevOps at Unicomer (Users of Claude Code & modern IDEs)  
 **Presenter:** Israel Castillo  
 **Core Storyline:** Demonstrating the ease of **creating local specialized coding agents, prompt-driven engineering skills, parallel subagents (Slide 13), and long-lived sidecars (Slide 14)** in Antigravity 2.0 with **Gemini 3.7 Flash**.
 

@@ -101,7 +101,7 @@ Dentro de cualquier repositorio de Unicomer (ej. un microservicio bancario, port
 
 ## 🛡️ 5. Gobernanza y Políticas de Administrador para Unicomer
 
-Desde la consola central de **Google Cloud / Gemini Enterprise Admin**, los líderes de TI (Alejandro, Mauricio y el equipo de Seguridad) pueden aplicar políticas obligatorias que la extensión de VS Code y el CLI respetarán automáticamente:
+Desde la consola central de **Google Cloud / Gemini Enterprise Admin**, los líderes de TI y el equipo de Seguridad de Unicomer pueden aplicar políticas obligatorias que la extensión de VS Code y Antigravity respetarán automáticamente:
 
 | Política de Admin | Configuración Recomendada para Unicomer | Impacto |
 | :--- | :--- | :--- |

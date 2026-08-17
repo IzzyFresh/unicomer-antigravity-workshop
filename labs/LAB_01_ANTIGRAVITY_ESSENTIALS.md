@@ -12,6 +12,8 @@
 Durante este taller utilizaremos la combinación más productiva para desarrolladores:
 * **Antigravity 2.0 (GUI):** Tu panel de control agéntico principal para orquestar planes, ver artefactos interactivos, disparar subagentes y monitorear tareas.
 * **Visual Studio Code:** Tu editor de confianza donde se sincronizan automáticamente los archivos, diffs y reglas del repositorio.
+  * 📦 **Instalar Extensión en VS Code:** [Marketplace Link](https://marketplace.visualstudio.com/items?itemName=Google.antigravity)
+  * ⚡ **Instalación Directa:** [`vscode:extension/Google.antigravity`](vscode:extension/Google.antigravity)
 
 ```
 +------------------------------------+------------------------------------+
